@@ -30,7 +30,7 @@ $ istioctl install --set profile=demo
 $ kubectl label namespace default istio-injection=enabled
 $ istioctl dashboard kiali
 ```
-Kiaki: user "admin"    senha "admin"
+Kiali: user "admin"    senha "admin"
 
 
 4. Subir serviços básicos
