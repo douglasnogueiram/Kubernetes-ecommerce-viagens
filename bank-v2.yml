@@ -1,0 +1,37 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bank-pod-v2
+  labels:
+    app: bank-pod
+    version: v2
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: bank-pod
+      version: v2
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: bank-pod
+        version: v2
+    spec:
+      containers:
+      - image: douglasnogueiram/ms-communication-bank:1.0.0.-SNAPSHOT
+        name: bank-pod
+        env:
+        - name: SPRING_DATASOURCE_USERNAME
+          value: "root"
+        - name: SPRING_DATASOURCE_PASSWORD
+          value: "root"
+        - name: SPRING_DATASOURCE_URL
+          value: "jdbc:mysql://mysql/banco"
+        - name: SERVER_PORT
+          value: "8090"
+        ports:
+        - containerPort: 8090
+          name: http
