@@ -11,7 +11,7 @@ Os microsserviços de exemplo estão nos repositórios:
 
 Para fazer os testes, seguir os passos:
 
-1. Gerar o build dos componentes, na pasta ms-communication-master
+1. Gerar o build dos componentes, na pasta ms-communication-XXX (repetir esse passo para cada MS existente). O build está configurado para já gerar uma imagem Docker e subir par o Docker Hub, como mostrado no artigo https://medium.com/@fernandoevangelista_28291/criando-e-enviando-imagem-docker-com-java-e-maven-4fa3c70dba0f
 ```
 $ mvn clean package dockerfile:push
 ```
