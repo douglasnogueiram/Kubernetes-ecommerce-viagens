@@ -28,6 +28,7 @@ $ export PATH=$pwd/bin:$PATH
 
 $ istioctl install --set profile=demo
 $ kubectl label namespace default istio-injection=enabled
+$ kubectl apply -f samples/addons
 $ istioctl dashboard kiali
 ```
 Kiali: user "admin"    senha "admin"
