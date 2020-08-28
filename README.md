@@ -28,7 +28,7 @@ $ export PATH=$pwd/bin:$PATH
 
 $ istioctl install --set profile=demo
 $ kubectl label namespace default istio-injection=enabled
-$ kubectl apply -f samples/addons
+$ kubectl apply -f istio-1.7.0/samples/addons
 $ istioctl dashboard kiali
 ```
 Kiali: user "admin"    senha "admin"
@@ -51,7 +51,7 @@ $ kubectl logs -t <nome do pod>
 6. Criar as filas do RabbitMQ via client
 ```
 $ fila-compras-aguardando
-fila-compras-finalizado
+$ fila-compras-finalizado
 ```
 
 7. Subir MS Banco
